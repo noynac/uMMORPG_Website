@@ -16,7 +16,7 @@ if ($dbType == "sqlite" || $dbType == "mysql") {
 		if ($dbType == "sqlite") {
 			$db = new PDO('sqlite:'.$config['database_SQLite_location'].''.$config['database_SQLite_name'].'');
 		}else{
-			$db = new PDO('mysql:host='.$config['database_MySQL_host'].';charset=utf8mb4;dbname='.$config['database_MySQL_DBname'].','.$config['database_MySQL_user'].','.$config['database_MySQL_password'].'');
+			$db = new PDO("mysql:host=" . $config['database_MySQL_host'] . ";charset=utf8mb4;dbname=" . $config['database_MySQL_name'], $config['database_MySQL_user'], $config['database_MySQL_password']);
 		}
 		$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }

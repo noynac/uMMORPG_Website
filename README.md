@@ -28,6 +28,7 @@ If you have any questions about something not listed here, or need help changing
 listed in the configuration, then feel free to message me on [Discord](https://discord.gg).
 
 note: ``password_salt`` option has been removed from the ``$config`` array, and is instead in the hash function directly below it.
+
 | Name | Description | Options |
 | ------ | ------ | ------ |
 | database_type | Select the database type for your project. | SQlite, MySQL |

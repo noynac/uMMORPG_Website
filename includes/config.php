@@ -14,18 +14,4 @@ $config = array(
 	"alphanumeric_names" => true,
 	"project_name" => "uMMORPG"
 );
-
-// password hashing
-if (!function_exists('pbkdf2')) {
-	function pbkdf2($username,$password) {
-		$iterations = 10000;
-		$length = 40;
-		$password_salt = $config['password_salt'];
-		$salt = $password_salt.$username;
-
-		$hash = hash_pbkdf2("sha1", $password, $salt, $iterations, $length);
-		$hash = strtoupper($hash);
-		return $hash;
-	}
-}
 ?>

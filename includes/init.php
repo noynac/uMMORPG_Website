@@ -1,5 +1,6 @@
 <?php
 include($_SERVER['DOCUMENT_ROOT'] . '/includes/config.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/includes/functions.php');
 
 // set secure cookie if SSL is true
 if($config['has_ssl'] == true) {

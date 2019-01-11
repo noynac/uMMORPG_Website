@@ -23,9 +23,6 @@ if($thisFile == "navbar.php") {
       <li class="nav-item active">
         <a class="nav-link" href="../">Home</a>
       </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="../users/index.php">Users</a>
-      </li>
     </ul>
     <ul class="navbar-nav mr-left">
 	  <?php

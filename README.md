@@ -25,9 +25,7 @@ This is meant to be a basic example website to build off of. Though you are free
 
 As many of the settings from config.php are quite self explanatory, I won't include all of them here.
 If you have any questions about something not listed here, or need help changing something not
-listed in the configuration, then feel free to message me on [Discord](https://discord.gg).
-
-note: ``password_salt`` option has been removed from the ``$config`` array, and is instead in the hash function directly below it.
+listed in the configuration, then feel free to message me on Discord.
 
 | Name | Description | Options |
 | ------ | ------ | ------ |

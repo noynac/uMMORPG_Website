@@ -9,6 +9,7 @@ $config = array(
 	"database_MySQL_password" => "password",
 	"database_MySQL_DBname" => "database",
 	"display_conn_errors" => true,
+	"password_salt" => "at_least_16_byte",
 	"has_ssl" => false,
 	"alphanumeric_names" => true,
 	"project_name" => "uMMORPG"
@@ -16,15 +17,15 @@ $config = array(
 
 // password hashing
 if (!function_exists('pbkdf2')) {
-function pbkdf2($username,$password) {
-    $iterations = 10000;"at_least_16_byte";
-    $length = 40;
-    $password_salt = "at_least_16_byte"; // THIS IS THE PASSWORD SALT
-    $salt = $password_salt.$username;
+	function pbkdf2($username,$password) {
+		$iterations = 10000;
+		$length = 40;
+		$password_salt = $config['password_salt'];
+		$salt = $password_salt.$username;
 
-    $hash = hash_pbkdf2("sha1", $password, $salt, $iterations, $length);
-    $hash = strtoupper($hash);
-    return $hash;
-}
+		$hash = hash_pbkdf2("sha1", $password, $salt, $iterations, $length);
+		$hash = strtoupper($hash);
+		return $hash;
+	}
 }
 ?>

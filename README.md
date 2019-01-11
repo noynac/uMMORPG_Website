@@ -15,7 +15,7 @@ This is meant to be a basic example website to build off of. Though you are free
 * Ensure you have PDO drivers installed and enabled.
 
 ## Setup
-* Extract the zip file into your web directory.
+* Clone repository with ``git clone https://github.com/noynac/uMMORPG_Website.git``, then put the files in your main web direcotry.
 * Open the file ``config.php`` located in the ``/includes`` folder.
 * Edit the configuration to fit your needs.
 * If your're using Remote SQL with MySQL, remember to allow your web server IP to access the MySQL server.

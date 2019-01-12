@@ -39,3 +39,4 @@ listed in the configuration, then feel free to message me on Discord.
 
  - Add character search page
  - Add view character page w/ stats
+ - Add email option with email verification

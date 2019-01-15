@@ -4,13 +4,13 @@ A PHP login/register system for uMMORPG, compatible with both MySQL and SQLite d
 
 ## Introduction
 
-Hi, I'm noynac! you can contact me on Discord at ``noynac#4082`` if you need any help!
+Hi, I'm noynac! Feel free to create an issue if your having problems.
 This is meant to be a basic example website to build off of. Though you are free to use it as is, if you'd like.
 
 ## Requirements
 * A web server, the most popular ones are Nginx and Apache.
 * PHP 7.x
-* SQLite3 ( ```sudo apt-get install php-sqlite3``` )
+* SQLite3
 * MySQL (if you're not using SQLite)
 * Ensure you have PDO drivers installed and enabled.
 

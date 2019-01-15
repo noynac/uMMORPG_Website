@@ -1,7 +1,7 @@
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . '/includes/init.php');
-include($_SERVER['DOCUMENT_ROOT'] . '/includes/backend/register.php');
-include($_SERVER['DOCUMENT_ROOT'] . '/includes/navbar.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/init.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/backend/register.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/navbar.php');
 ?>
 <body class="text-center">
    <div class="container">
@@ -14,7 +14,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/includes/navbar.php');
 		 // display errors
 		 if(!empty($errors)) {
 		 	foreach($errors as $error) {
-		 		echo '<center style="color:red;">'.$error.'<br></center>';
+		 		echo '<div style="color:red;text-align: center;">'.$error.'<br></div>';
 		 	}
 		 }
 		 ?>

@@ -1,6 +1,6 @@
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . '/includes/config.php');
-include($_SERVER['DOCUMENT_ROOT'] . '/includes/functions.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/config.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/functions.php');
 
 // set secure cookie if SSL is true
 if($config['has_ssl'] == true) {
@@ -12,9 +12,9 @@ header('X-Content-Type-Options: nosniff');
 
 // database connection
 $dbType = strtolower($config['database_type']);
-if($dbType == "sqlite" || $dbType == "mysql") {
+if($dbType === "sqlite" || $dbType === "mysql") {
     try {
-        if($dbType == "sqlite") {
+        if($dbType === "sqlite") {
             $db = new PDO('sqlite:' . $config['database_SQLite_location'] . '' . $config['database_SQLite_name'] . '');
         } else {
             $db = new PDO("mysql:host=" . $config['database_MySQL_host'] . ";charset=utf8mb4;dbname=" . $config['database_MySQL_name'], $config['database_MySQL_user'], $config['database_MySQL_password']);

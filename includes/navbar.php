@@ -1,7 +1,7 @@
 <?php
 $thisFile = basename($_SERVER["SCRIPT_FILENAME"], '.php');
-if($thisFile == "navbar.php") {
-	header('Location: ../index.php');
+if($thisFile === "navbar.php") {
+	\header('Location: ../index.php');
 	exit;
 }
 ?>

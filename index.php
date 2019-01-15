@@ -1,6 +1,6 @@
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . '/includes/init.php');
-include($_SERVER['DOCUMENT_ROOT'] . '/includes/navbar.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/init.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/navbar.php');
 ?>
 <br><br><br>
 <body>

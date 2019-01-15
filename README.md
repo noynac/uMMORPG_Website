@@ -19,7 +19,7 @@ This is meant to be a basic example website to build off of. Though you are free
 * Open the file ``config.php`` located in the ``/includes`` folder.
 * Edit the configuration to fit your needs.
 * If you're using Remote SQL with MySQL, remember to allow your web server IP to access the MySQL server.
-* If you're using SQLite, you'll need to CHMOD your database permissions to allow the server to write to it.
+* If you're using SQLite, you'll need to CHMOD your database and folder permissions to allow the server to write to it.
 
 ## Configuration Options
 

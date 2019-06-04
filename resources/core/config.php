@@ -11,7 +11,7 @@ please read:
 	is important to know that once the salt is changed, no pre-existing accounts will 
 	be able to login.
 
-	-- The login WILL NOT WORK if you have spaces in your session_name. --
+	You can name session_name whatever you want, just remove spaces.
 */
 $config = array(
 	'base_url' => 'https://mywebsite.com',

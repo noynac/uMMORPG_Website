@@ -2,6 +2,10 @@
 require_once($_SERVER['DOCUMENT_ROOT'] . '/../resources/core/config.php');
 require_once($_SERVER['DOCUMENT_ROOT'] . '/../resources/core/functions.php');
 
+if(strpos($config['session_name'], ' ') !== false) {
+  $config['session_name'] = preg_replace('/\s+/', '', $config['session_name']);
+}
+
 // set secure cookie if SSL is true
 if($config['has_ssl'] == true) {
     ini_set('session.cookie_secure', 1);

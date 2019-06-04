@@ -16,7 +16,7 @@ This is meant to be a basic example website to build off of. Though you are free
 
 ## Setup
 * Clone repository with ``git clone https://github.com/noynac/uMMORPG_Website.git``.
-* Take the files inside ``public_html`` and place them in the main web directory.
+* Move the files inside the ``public_html`` folder into your main web directory.
 * Move the ``resources`` folder one directory up from your main web directory.
 * Open the file ``config.php`` located in ``resources/core/config.php``.
 * Edit the configuration to fit your needs.

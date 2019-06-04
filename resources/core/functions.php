@@ -10,7 +10,6 @@ function pbkdf2(string $username, string $password, string $passwordSalt)
     return $hash;
 }
 
-// figured I'd put this here since both login and register use it
 function valid_name(string $username, bool $alphanumeric)
 {  
     if($alphanumeric === true) {

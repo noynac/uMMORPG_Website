@@ -1,9 +1,4 @@
 <?php
-$thisFile = basename($_SERVER["SCRIPT_FILENAME"], '.php');
-if($thisFile === "login.php") {
-    \header('Location: ../index.php');
-    exit;
-}
 if($session) {
     \header('Location: ../index.php');
     exit;
@@ -29,8 +24,8 @@ if(isset($_POST['login'])) {
             if($fetchUser) {
                 if($fetchUser->password === $password) {
                     session_regenerate_id(true);
-                    $_SESSION[$config['project_name']] = $name;
-                    \header('Location: ../index.php');
+                    $_SESSION[$config['session_name']] = $name;
+                    \header('Location: '.$config['base_url'].'/index.php');
                     exit;
                 } else {
                     $errors[] = "Wrong username or password."; // incorrect password

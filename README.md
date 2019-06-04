@@ -15,8 +15,10 @@ This is meant to be a basic example website to build off of. Though you are free
 * Ensure you have PDO drivers installed and enabled.
 
 ## Setup
-* Clone repository with ``git clone https://github.com/noynac/uMMORPG_Website.git``, then put the files in your main web directory.
-* Open the file ``config.php`` located in the ``/includes`` folder.
+* Clone repository with ``git clone https://github.com/noynac/uMMORPG_Website.git``.
+* Take the files inside ``public_html`` and place them in the main web directory.
+* Move the ``resources`` folder one directory up from your main web directory.
+* Open the file ``config.php`` located in ``resources/core/config.php``.
 * Edit the configuration to fit your needs.
 * If you're using Remote SQL with MySQL, remember to allow your web server IP to access the MySQL server.
 * If you're using SQLite, you'll need to CHMOD your database and folder permissions to allow the server to write to it.
@@ -24,8 +26,10 @@ This is meant to be a basic example website to build off of. Though you are free
 ## Configuration Options
 
 As many of the settings from config.php are quite self explanatory, I won't include all of them here.
-If you have any questions about something not listed here, or need help changing something not
-listed in the configuration, then feel free to message me on Discord.
+
+Please note that your password salt may not be on line 210 depending on your version of uMMORPG you use & 
+the changes you may have previously made. It is also important to mention that once you change the salt,
+no pre-existing accounts will be able to login.
 
 | Name | Description | Options |
 | ------ | ------ | ------ |

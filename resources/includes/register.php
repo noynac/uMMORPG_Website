@@ -1,10 +1,4 @@
 <?php
-$thisFile = basename($_SERVER["SCRIPT_FILENAME"], '.php');
-if($thisFile === "register.php") {
-    \header('Location: ../index.php');
-    exit;
-}
-
 if($session) {
     \header('Location: ../index.php');
     exit;
@@ -40,8 +34,8 @@ if(isset($_POST['register'])) {
                 $createAccount->execute();
                 
                 session_regenerate_id(true);
-                $_SESSION[$config['project_name']] = $name;
-                \header('Location: ../index.php');
+                $_SESSION[$config['session_name']] = $name;
+                \header('Location: '.$config['base_url'].'/index.php');
                 exit;
             } else {
                 $errors[] = "That name is already taken."; // user already exists

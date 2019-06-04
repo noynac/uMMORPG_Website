@@ -1,7 +1,7 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/init.php');
-require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/backend/register.php');
-require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/navbar.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/../resources/core/init.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/../resources/includes/navbar.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/../resources/includes/register.php');
 ?>
 <body class="text-center">
    <div class="container">
@@ -30,8 +30,9 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/navbar.php');
          <button class="btn btn-info btn-block my-4" style="background-color:#33B5E5;" type="submit" name="register">Create Account</button>
          <!-- Register -->
          <p>Already have an account?
-            <a href="../account/login.php">Login</a>
+            <a href="<?= $config['base_url']; ?>/account/login.php">Login</a>
          </p>
       </form>
    </div>
 </body>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../resources/includes/footer.php'); ?>

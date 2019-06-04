@@ -1,6 +1,6 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/config.php');
-require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/functions.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/../resources/core/config.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/../resources/core/functions.php');
 
 // set secure cookie if SSL is true
 if($config['has_ssl'] == true) {
@@ -34,19 +34,18 @@ if($dbType === "sqlite" || $dbType === "mysql") {
     die();
 }
 
-// set the session name to the project name
 if(session_status() == PHP_SESSION_NONE) {
-    session_name($config['project_name']);
+    session_name($config['session_name']);
     session_start();
 }
 
 // define session to be used to see if the user is logged in
-$session = isset($_SESSION[$config['project_name']]);
+$session = isset($_SESSION[$config['session_name']]);
 
 // if the user is logged in, lets make a user variable to fetch account data
 if($session) {
     $fetchUser = $db->prepare('SELECT * FROM accounts WHERE name = :name');
-    $fetchUser->bindParam(':name', $_SESSION[$config['project_name']]);
+    $fetchUser->bindParam(':name', $_SESSION[$config['session_name']]);
     $fetchUser->execute();
     $user = $fetchUser->fetch(PDO::FETCH_OBJ);
 }

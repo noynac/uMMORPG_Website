@@ -17,8 +17,8 @@ if(isset($_POST['register'])) {
         }
         
         if(valid_name($name, $config['alphanumeric_names']) === false) {
-			$errors[] = "Invalid username.";
-		}
+		$errors[] = "Invalid username.";
+	}
         
         if(empty($errors)) {
             $checkName = $db->prepare('SELECT count(*) FROM accounts WHERE name = :name');

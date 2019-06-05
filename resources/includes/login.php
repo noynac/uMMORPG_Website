@@ -13,10 +13,10 @@ if(isset($_POST['login'])) {
         
         if(valid_name($name, $config['alphanumeric_names']) === false) {
 			$errors[] = "Invalid username.";
-		}
+	}
 
         if(empty($errors)) {
-            $fetchUser = $db->prepare('SELECT * FROM accounts WHERE name = :name');
+            $fetchUser = $db->prepare('SELECT password FROM accounts WHERE name = :name');
             $fetchUser->bindParam(':name', $name);
             $fetchUser->execute();
             $fetchUser = $fetchUser->fetch(PDO::FETCH_OBJ);

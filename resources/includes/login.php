@@ -12,7 +12,7 @@ if(isset($_POST['login'])) {
         $password = pbkdf2($name, $_POST['password'], $config['password_salt']);
         
         if(valid_name($name, $config['alphanumeric_names']) === false) {
-			$errors[] = "Invalid username.";
+		$errors[] = "Invalid username.";
 	}
 
         if(empty($errors)) {

@@ -27,9 +27,12 @@ if(isset($_POST['register'])) {
             $exists = $checkName->fetchColumn();
             
             if($exists == 0) {
-                $createAccount = $db->prepare("INSERT INTO accounts (name, password, banned) VALUES (:name,:password,:banned)");
+		$date = date("Y-m-d H:i:s");
+                $createAccount = $db->prepare("INSERT INTO accounts (name, password, created, lastlogin, banned) VALUES (:name,:password,:created,:lastlogin,:banned)");
                 $createAccount->bindParam(':name', $name);
                 $createAccount->bindParam(':password', $password);
+                $createAccount->bindParam(':created', $date);
+                $createAccount->bindParam(':lastlogin', $date);
                 $createAccount->bindValue(':banned', 0);
                 $createAccount->execute();
                 

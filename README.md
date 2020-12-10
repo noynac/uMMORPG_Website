@@ -25,7 +25,7 @@ This is meant to be a basic example website to build off of. Though you are free
 
 ## Configuration Options
 
-As many of the settings from config.php are quite self explanatory, I won't include all of them here.
+As many of the settings from config.php are self explanatory, I won't include all of them here.
 
 Please note that your password salt may not be on line 210 depending on your version of uMMORPG you use & 
 the changes you may have previously made. It is also important to mention that once you change the salt,
